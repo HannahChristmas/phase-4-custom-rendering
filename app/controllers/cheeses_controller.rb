@@ -3,7 +3,7 @@ class CheesesController < ApplicationController
   # GET /cheeses
   def index
     cheeses = Cheese.all
-    render json: cheeses
+    render json: cheeses, only: [:id, :name]
   end
 
   # GET /cheeses/:id
@@ -13,3 +13,4 @@ class CheesesController < ApplicationController
   end
 
 end
+ 
